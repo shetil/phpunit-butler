@@ -1,0 +1,4 @@
+a:3:{i:0;s:21:"common/image/BaseTest";i:1;s:21:"common/FileSystemTest";i:2;s:93:"util/HistoryTest
+fake/fake_pathTest
+tests/PHPUnit2/Tests/OneTestCase
+common/FileSystemTest";}

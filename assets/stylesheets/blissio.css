@@ -1,0 +1,120 @@
+
+#body{
+    width: 720px;
+    margin: auto;
+    font-family: arial, serif;
+}
+
+h1{
+  background: url("../icons/blissio.png") center left no-repeat;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  line-height: 60px;
+  padding-left: 175px;
+}
+
+input[type="text"],
+.ui-autocomplete,
+#progressbar-container{
+    width: 600px;
+}
+
+#progressbar-container{
+    width: 610px;
+}
+
+input[type="text"]{
+    font-size: 16px;
+    line-height: 16px;
+    height: 16px;
+    
+    border: 1px solid #666;
+    font-weight: bold;
+    padding: 2px 5px;
+}
+
+#progressbar-container{
+    margin: 10px 0;
+    height: 24px;
+}
+
+#progressbar{
+    height: 24px;
+}
+
+.ui-progressbar-value {
+    background-image: url(../../css/images/pbar-ani.gif);
+    height: 22px;
+}
+
+input[type="button"]{
+    font-size: 16px !important;
+    font-weight: bold;
+    font-variant: small-caps;
+    margin-left: 10px;
+    vertical-align: top;
+    padding: 0 .5em;
+}
+
+.ui-widget{
+    font-size: 1em;
+}
+
+.ui-menu-item{
+    margin: 4px;
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 720px;
+    margin-bottom: 20px;
+}
+
+tr{
+    overflow: scroll;
+}
+
+table caption{
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td{
+    text-align: left;
+    font-size: 12px;
+    padding: 2px;
+    min-height: 24px;
+}
+
+td.name {
+    width: 200px;
+}
+
+td.status, td.time, td.memory{
+    width: 75px;
+}
+
+tr.Failure, tr.Error, tr.trace{
+    background-color: #efcccc;
+}
+
+tr.Success{
+    background-color: #ccefcc;
+}
+
+tr.Skipped, tr.Incomplete{
+    background-color: #efefcc;
+}
+
+pre{
+    font-family: mono;
+    font-size: 10px;
+    background-color: transparent;
+    padding: 5px;
+    margin: 0 0 10px;
+    width: 495px;
+    overflow: auto;
+}

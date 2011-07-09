@@ -1,0 +1,215 @@
+#body{
+    margin: auto;
+    width: 960px;
+}
+
+body,table{
+    font-family: 'Play', arial, sans-serif;
+}
+
+pre{
+    font-family: 'Droid Sans Mono', sans serif;
+}
+
+h1{
+	overflow: hidden;
+    font-size: 32px;
+}
+
+h1 .phpunit{
+  background-color: black;
+  border-radius: 30px;
+  border: 1px solid #222;
+  color: white;
+
+  float: left;
+  margin: 10px 10px 0 0;
+  padding: .20em .5em;
+  background: -webkit-linear-gradient(top, #444 0%, #555 45%, #333 55%, #000 100%);
+  background: -moz-linear-gradient(top, #444 0%, #555 45%, #333 55%, #000 100%);	
+  box-shadow: 0 0 10px #666 inset;
+  letter-spacing: .035em;
+}
+
+h1 .frontend{
+    font-size: 36px;
+    padding: .15em .5em;
+	margin: 10px;
+    font-weight: 400;
+	letter-spacing: .025em;
+    text-shadow: 0 1px 3px rgba(0,0,0,.35);
+}
+ 
+
+#input-test{
+    width: 80%;
+    font-size: 18px;
+    color: #333;
+    line-height: 24px;
+    padding: 3px 5px;
+}
+
+.icon{
+	float: left;
+	border-radius: 15px;
+	line-height: 12px;
+ 	color: white;
+	width: 16px;
+	height: 16px;
+}
+
+.icon .symbol{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 100%;
+	vertical-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Play';
+}
+
+.icon.skipped, .icon.notify, .icon.incomplete{
+	background: -webkit-linear-gradient(top, #FFA500 0%, #FF8c00 100%);
+	background: -moz-linear-gradient(top, #FFA500 0%, #FF8c00 100%);
+	border: 1px solid #FF8c00;
+}
+
+.icon.skipped .symbol{
+
+}
+
+.icon.success{
+	background: -webkit-linear-gradient(top, #008000 0%, #006400 100%);
+	background: -moz-linear-gradient(top, #008000 0%, #006400 100%);
+	border: 1px solid #006400;
+}
+
+.icon.error, .icon.failure{
+	background: -webkit-linear-gradient(top, #B22222 0%, #8B0000 100%);
+	background: -moz-linear-gradient(top, #B22222 0%, #8B0000 100%);
+	border: 1px solid #8B0000;
+}
+
+.icon.error .symbol, .icon.failure .symbol{	
+    margin-left: -1px;
+}
+
+table.results{
+	margin: 1.5em;
+	font-size: 14px;
+	border-spacing: 0 5px;
+	border-collapse: seperate;
+}
+
+td,th{
+	margin: 0;
+}
+
+th{
+	padding: 0 8px;
+    letter-spacing: .06em;
+}
+
+th.test{
+	min-width: 200px;
+    font-size: 18px;
+    text-align: left;
+    color: #006393;
+}
+
+th.time, th.memory{
+	min-width: 75px;
+}
+
+th.message{
+	min-width: 250px;
+}
+
+table td{
+	padding: 8px;
+	border: 1px solid #666;
+	border-width: 1px 1px 1px 0;
+    vertical-align: top;
+}
+
+td.test{
+	height: 18px;
+	background-color: rgba(0,0,0,.75);
+	color: white;
+	border-radius: 6px 0 0 6px;
+    border-left-width: 1px;
+}
+
+td.test .icon{
+	margin-right: 10px;
+}
+
+td.message{
+	border-radius: 0 6px 6px 0;
+}
+
+tr.notify td, tr.skipped td, tr.incomplete td{
+	background-color: rgba(255,255,0,.25);
+}
+
+tr.success td{
+	background-color: rgba(0,255,0,.25);
+}
+
+tr.error td, tr.failure td{
+	background-color: rgba(255,0,0,.25);
+}
+
+td.test{
+    background-color: #2c2c2c !important;
+}
+
+td.time, td.memory{
+	text-align: center;
+}
+
+td.empty{
+    border: none;
+    height: 5px;
+    line-height: 5px;
+}
+
+
+tr.trace td.test{
+    border-radius: 6px 0 0 0;
+}
+
+tr.trace td.message{
+    border-radius: 0 6px 0 0;
+}
+
+tr.trace-output td.message{
+    border: none;
+    background-color: #FFE9E9;
+    padding-left: 216px;
+    color: #222;
+    padding-top: 0;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid #DDD;
+    font-size: 13px;
+}
+
+.file{
+    font-size: 12px;
+    color: #393988;
+}
+
+p{
+    margin: 0 0 5px;
+}
+
+.ui-menu-item{
+    font-size: 18px;
+}
+
+canvas.coverage{
+    width: 18px;
+    height: 18px;
+    background-color: red;
+}
