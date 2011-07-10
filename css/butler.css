@@ -1,6 +1,22 @@
+html, body {
+    height: 100%;
+}
+
+
+body{
+    margin: 0;
+    background-color: #FCFCFC;
+);
+    
+}
+
 #body{
     margin: auto;
-    width: 960px;
+    width: 800px;
+    background-color: #FEFEFE;
+    padding: 0 20px;
+    min-height: 100%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 }
 
 body,table{
@@ -14,6 +30,9 @@ pre{
 h1{
 	overflow: hidden;
     font-size: 32px;
+    margin: 10px 0;
+    float: left;
+    width: 50%;
 }
 
 h1 .phpunit{
@@ -21,7 +40,6 @@ h1 .phpunit{
   border-radius: 30px;
   border: 1px solid #222;
   color: white;
-
   float: left;
   margin: 10px 10px 0 0;
   padding: .20em .5em;
@@ -31,22 +49,46 @@ h1 .phpunit{
   letter-spacing: .035em;
 }
 
-h1 .frontend{
+h1 .butler{
     font-size: 36px;
     padding: .15em .5em;
 	margin: 10px;
     font-weight: 400;
 	letter-spacing: .025em;
-    text-shadow: 0 1px 3px rgba(0,0,0,.35);
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
 }
- 
 
 #input-test{
-    width: 80%;
+    width: 99%;
     font-size: 18px;
     color: #333;
     line-height: 24px;
     padding: 3px 5px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+#actions{
+    float: right;
+    width: 30%;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 57px;
+}
+
+#actions input{
+    vertical-align: text-top;
+}
+
+#input-test:focus{
+    box-shadow: 0 0 4px #9999FF;
+    border-color: #888899;
+}
+
+#btn-run-test{
+    width: 100%;
+    padding: 0.25em 1em;
+    margin-bottom: .25em;
 }
 
 .icon{
@@ -72,7 +114,7 @@ h1 .frontend{
 .icon.skipped, .icon.notify, .icon.incomplete{
 	background: -webkit-linear-gradient(top, #FFA500 0%, #FF8c00 100%);
 	background: -moz-linear-gradient(top, #FFA500 0%, #FF8c00 100%);
-	border: 1px solid #FF8c00;
+	border: 1px solid #FFA000;
 }
 
 .icon.skipped .symbol{
@@ -80,14 +122,14 @@ h1 .frontend{
 }
 
 .icon.success{
-	background: -webkit-linear-gradient(top, #008000 0%, #006400 100%);
-	background: -moz-linear-gradient(top, #008000 0%, #006400 100%);
+	background: -webkit-linear-gradient(top, #009000 0%, #007000 100%);
+	background: -moz-linear-gradient(top, #009000 0%, #007000 100%);
 	border: 1px solid #006400;
 }
 
 .icon.error, .icon.failure{
-	background: -webkit-linear-gradient(top, #B22222 0%, #8B0000 100%);
-	background: -moz-linear-gradient(top, #B22222 0%, #8B0000 100%);
+	background: -webkit-linear-gradient(top, #C02222 0%, #900000 100%);
+	background: -moz-linear-gradient(top, #C02222 0%, #900000 100%);
 	border: 1px solid #8B0000;
 }
 
@@ -96,10 +138,11 @@ h1 .frontend{
 }
 
 table.results{
-	margin: 1.5em;
+	margin: 1em 0;
 	font-size: 14px;
 	border-spacing: 0 5px;
 	border-collapse: seperate;
+    width: 100%;
 }
 
 td,th{
@@ -116,6 +159,7 @@ th.test{
     font-size: 18px;
     text-align: left;
     color: #006393;
+    padding-left: 5px;
 }
 
 th.time, th.memory{
@@ -184,15 +228,22 @@ tr.trace td.message{
     border-radius: 0 6px 0 0;
 }
 
-tr.trace-output td.message{
-    border: none;
-    background-color: #FFE9E9;
-    padding-left: 216px;
-    color: #222;
-    padding-top: 0;
+tr.trace-output td{
     border-radius: 0 0 6px 6px;
     border: 1px solid #DDD;
+    background-color: #FFE9E9;
+}
+
+tr.trace-output td.message{
+    color: #222;
+    padding-top: 0;
+    border-left: none;
     font-size: 13px;
+}
+
+tr.trace-output td.empty{
+    border-right: none;
+    border-radius: 0 0 0 6px;
 }
 
 .file{
@@ -212,4 +263,29 @@ canvas.coverage{
     width: 18px;
     height: 18px;
     background-color: red;
+}
+
+.ui-autocomplete-loading{
+    background: url('../images/spinner.gif') right 3px no-repeat;
+}
+
+#suite_total, .error_wrap, .error_desc{
+    margin: .25em 0 1em;
+    color: #666;
+    width: 100%;
+    padding: 0 5px;
+}
+
+#suite_count{
+    float: right;
+    margin-right: 5px;
+}
+
+.error_wrap{
+    padding: 5px 0;
+    color: darkred;
+}
+
+.error_wrap span{
+    padding: 0 10px;
 }

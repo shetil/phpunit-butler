@@ -121,7 +121,7 @@ class TestResult{
                 
                 $str .= "<p>{$method['class']}{$method['type']}{$method['function']}($params)";
                 
-                $str .= "\n\t<span class=\"file\">{$method['file']}({$method['line']})</span></p>";
+                $str .= "\n    <span class=\"file\">{$method['file']}({$method['line']})</span></p>";
             }
         }
 

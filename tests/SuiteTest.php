@@ -1,6 +1,6 @@
 <?php
 require_once 'StatusTest.php';
-require_once '/var/www/sharefolder/beans/Blissio/Tests/Unit/AutoloadTest.php';
+require_once 'Subfolder/FilesTest.php';
 
 class SuiteTest extends PHPUnit_Framework_TestSuite
 {
@@ -8,7 +8,7 @@ class SuiteTest extends PHPUnit_Framework_TestSuite
     {
         $suite = new SuiteTest();
         $suite->addTestSuite('StatusTest');
-        $suite->addTestSuite('AutoloadTest');
+        $suite->addTestSuite('FilesTest');
         
         return $suite;
     }
@@ -23,4 +23,6 @@ class SuiteTest extends PHPUnit_Framework_TestSuite
 //        print __METHOD__ . "\n";
     }
 }
+
+
 ?>

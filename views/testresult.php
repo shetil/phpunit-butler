@@ -1,3 +1,22 @@
+<?php if(isset($error_msg)): ?>
+<div class="error_wrap">
+ <div class="icon error">
+    <div class="symbol">!</div>
+</div>
+<span><?php echo $error_msg; ?></span>
+</div>
+<?php exit; ?>
+<?php endif; ?>
+
+<?php if($total_time && $count_total): ?>
+<div id="suite_total">
+    Ran <?php echo $count_total ?> tests in <?php echo round($total_time,2) ?> seconds
+    <div id="suite_count">
+        <?php echo "Passed: $count_passed&nbsp;&nbsp;Failed: $count_failed&nbsp;&nbsp;Skipped: $count_skipped"; ?>
+    </div>
+</div>
+<?php endif; ?>
+
 <?php foreach($suiteResults as $key => $suite): ?>
 <?php if($key): ?>
 <table class="results">
@@ -25,17 +44,14 @@
         </tr>
         <?php if($trace): ?>
         <tr class="error trace-output">
-            <td colspan="4" class="message">
+            <td class="empty">&nbsp;</td>
+            <td colspan="3" class="message">
                 <pre><?php echo $result->compactTrace(); ?></pre>
             </td>
         </tr>
         <tr><td class="empty" colspan="4">&nbsp;</td></tr>
         <?php endif; ?>
         <?php endforeach; ?>
-        <tr>
-            <td class="test">Code Coverage</td>
-            <td class="message" colspan="3">&nbsp;</td>
-        </tr>
     </tbody>
     <tfoot></tfoot>
 </table>

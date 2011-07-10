@@ -15,7 +15,6 @@ class Listener implements \PHPUnit_Framework_TestListener {
 
 	public function __construct() {
          require_once 'PHP/CodeCoverage.php';
-         $this->coverage = new \PHP_CodeCoverage;
 	}
 
         public function reset(){
@@ -39,7 +38,6 @@ class Listener implements \PHPUnit_Framework_TestListener {
 	public function startTest(\PHPUnit_Framework_Test $test) {
             $this->total++;
             $this->test_success = true;
-            $this->coverage->start(get_class($test));
             $this->pre_mem = xdebug_memory_usage();
 	}
 
@@ -76,12 +74,9 @@ class Listener implements \PHPUnit_Framework_TestListener {
 	 * @return void
 	 */
 	public function endTest(\PHPUnit_Framework_Test $test, $time) {
-            $this->coverage->stop();
+            $mem = $this->calcMem();
             
-            $summary = $this->coverage->getSummary(); 
-
-            if($this->test_success === true){
-                $mem = $this->calcMem();
+            if($this->test_success === true){    
                 $this->results[] = new TestResult(TestResult::SUCCESS, $test,  $time, $mem);
                 $this->success++;
             }
