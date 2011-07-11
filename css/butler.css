@@ -266,7 +266,7 @@ canvas.coverage{
 }
 
 .ui-autocomplete-loading{
-    background: url('../images/spinner.gif') right 3px no-repeat;
+    background: url('../images/spinner.gif') 99% 7px no-repeat;
 }
 
 #suite_total, .error_wrap, .error_desc{
