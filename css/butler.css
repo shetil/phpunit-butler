@@ -217,6 +217,7 @@ td.empty{
     border: none;
     height: 5px;
     line-height: 5px;
+    padding: 0;
 }
 
 

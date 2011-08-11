@@ -2,6 +2,9 @@
 require_once 'StatusTest.php';
 require_once 'Subfolder/FilesTest.php';
 
+/**
+ * @monitor Butler\Files
+ */
 class SuiteTest extends PHPUnit_Framework_TestSuite
 {
     public static function suite()

@@ -8,16 +8,16 @@
 <?php exit; ?>
 <?php endif; ?>
 
-<?php if($total_time && $count_total): ?>
+<?php if(isset($stats['time']) && isset($stats['total'])): ?>
 <div id="suite_total">
-    Ran <?php echo $count_total ?> tests in <?php echo round($total_time,2) ?> seconds
+    Ran <?php echo $stats['total'] ?> tests in <?php echo round($stats['time'],2) ?> seconds
     <div id="suite_count">
-        <?php echo "Passed: $count_passed&nbsp;&nbsp;Failed: $count_failed&nbsp;&nbsp;Skipped: $count_skipped"; ?>
+        <?php echo "Passed: {$stats['passed']}&nbsp;&nbsp;Failed: {$stats['failed']}&nbsp;&nbsp;Skipped: {$stats['skipped']}"; ?>
     </div>
 </div>
 <?php endif; ?>
 
-<?php foreach($suiteResults as $key => $suite): ?>
+<?php foreach($runner->getResults() as $key => $suite): ?>
 <?php if($key): ?>
 <table class="results">
     <thead>	
@@ -29,7 +29,7 @@
 	</tr>
 	</thead>
     <tbody> 
-        <?php foreach($suite->getResults() as $result): ?>
+        <?php foreach($suite['results'] as $result): ?>
         <?php $trace = $result->status == Butler\TestResult::ERROR && $result->compactTrace(); ?>
         <tr class="<?php echo $result->statusName(); ?> <?php echo $trace ? 'trace' : ''; ?>">
             <td class="test" title="<?php echo $result->statusName();  ?>">
